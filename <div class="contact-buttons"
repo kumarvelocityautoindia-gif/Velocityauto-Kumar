@@ -1333,14 +1333,12 @@
             <p class="subtitle" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
                 Schedule your VIP consultation with our dedicated account managers. We're available seven days a week.
             </p>
- <!-- 🟡 ICON WhatsApp + Email (Clean Stack) -->
+ <!-- 🟡 UPGRADED WhatsApp + Email (Clean) -->
 <div style="position:fixed;bottom:25px;right:20px;z-index:10000;display:flex;flex-direction:column;gap:12px;">
-  <!-- WhatsApp Icon -->
+  <!-- WhatsApp with "whatsapp" text -->
   <a href="https://wa.me/919611991902?text=Hi%20Velocity%20Auto%20India%2C%20need%20luxury%20parts%20quote%20🚗" 
-     style="width:56px;height:56px;background:#25D366;border-radius:50%;box-shadow:0 6px 20px rgba(37,211,102,0.5);display:flex;align-items:center;justify-content:center;text-decoration:none;transition:all 0.3s;" 
-     target="_blank" title="Message WhatsApp 📱">
-    <svg width="24" height="24" viewBox="0 0 32 32" style="fill:#fff;">
-      <path d="M10.5 1.5h      
+     style="display:flex;align-items:center;background:#25D366;color:white;padding:12px 18px;border-radius:25px;box-shadow:0 6px 20px rgba(37,211,102,0.5);text-decoration
+
   </a>
   <!-- Email Button -->
   <a href="mailto:kumarvelocityautoindia@gmail.com" class="btn btn-email" style="background:#6c757d;color:white;padding:14px 20px;border-radius:25px;box-shadow:0 6px 20px rgba(108,117,125,0.4);text-decoration:none;font-weight:500;font-size:14px;transition:all 0.3s;display:flex;align-items:center;">
@@ -1348,13 +1346,7 @@
     Email Us ✉️
   </a>
 </div>
-
                 </a>
-                <a href="mailto:kumarvelocityautoindia.com" class="btn btn-email">
-                    <i class="fas fa-envelope" style="margin-right: 10px;"></i>Email Us
-                </a>
-            </div>
-        </div>
     </section>
 
     <!-- ═══════════════════════════════════════════════════════════════
