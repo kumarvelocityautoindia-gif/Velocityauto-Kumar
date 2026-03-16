@@ -1535,6 +1535,68 @@
 (function(d,t){var BASE_URL="https://app.hello.chat";var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src=BASE_URL+"/embed.js";g.defer=true;g.async=true;g.setAttribute("chatbot-id","YOUR_ID_HERE");g.setAttribute("domain",window.location.hostname);s.parentNode.insertBefore(g,s);})(document,"script");
 </script>
 <!-- VeloBot END -->
+<!-- 🟢 GREEN VeloBot Widget - Copy All! -->
+<div id="velobot-container" style="position:fixed;bottom:20px;right:20px;z-index:9999;">
+  <div style="background:#00C851;color:white;padding:15px;border-radius:50px;box-shadow:0 4px 12px rgba(0,200,81,0.3);cursor:pointer;font-family:Arial;font-size:14px;" onclick="toggleVeloBot()">
+    🟢 Ask VeloBot <span id="velo-status">Online</span>
+  </div>
+  <div id="velobot-chat" style="display:none;background:white;width:350px;height:500px;border-radius:15px;box-shadow:0 8px 32px rgba(0,0,0,0.2);bottom:80px;right:20px;position:absolute;overflow:hidden;">
+    <div style="background:#00C851;color:white;padding:15px;font-weight:bold;">🟢 VeloBot Assistant</div>
+    <div id="velo-messages" style="height:400px;overflow-y:auto;padding:15px;font-size:14px;">
+      <div style="background:#f1f1f1;padding:10px;border-radius:10px;margin-bottom:10px;">Hi! Ask me about luxury auto parts! 🚗</div>
+    </div>
+    <div style="padding:15px;border-top:1px solid #eee;">
+      <input id="velo-input" type="text" placeholder="Type message..." style="width:70%;padding:10px;border:1px solid #ddd;border-radius:20px;outline:none;font-size:14px;">
+      <button onclick="sendVeloMessage()" style="width:25%;background:#00C851;color:white;border:none;padding:10px;border-radius:20px;cursor:pointer;font-size:14px;">Send</button>
+    </div>
+  </div>
+</div>
+
+<script>
+let veloMessages = document.getElementById('velo-messages');
+let veloInput = document.getElementById('velo-input');
+
+function toggleVeloBot() {
+  let chat = document.getElementById('velobot-chat');
+  chat.style.display = chat.style.display === 'none' ? 'block' : 'none';
+}
+
+function sendVeloMessage() {
+  let msg = veloInput.value.trim();
+  if (!msg) return;
+  
+  // User message
+  let userDiv = document.createElement('div');
+  userDiv.style.cssText = 'text-align:right;margin-bottom:10px;padding:8px 12px;background:#00C851;color:white;border-radius:18px 18px 5px 18px;max-width:80%;margin-left:auto;display:inline-block;';
+  userDiv.textContent = msg;
+  veloMessages.appendChild(userDiv);
+  
+  // Bot response (simple AI)
+  setTimeout(() => {
+    let responses = [
+      "Great choice! We have OEM parts for luxury cars 🚗",
+      "Check our Marketplace for genuine parts",
+      "WhatsApp us for quote: +91-XXXXXXXXXX 📱",
+      "7-day delivery, 3yr warranty guaranteed! ✅",
+      "Popular: BMW brakes, Bentley suspension 🛠️"
+    ];
+    let botDiv = document.createElement('div');
+    botDiv.style.cssText = 'background:#f1f1f1;padding:10px;border-radius:18px;margin-bottom:10px;max-width:80%;display:inline-block;';
+    botDiv.innerHTML = responses[Math.floor(Math.random() * responses.length)];
+    veloMessages.appendChild(botDiv);
+    veloMessages.scrollTop = veloMessages.scrollHeight;
+  }, 1000);
+  
+  veloInput.value = '';
+  veloMessages.scrollTop = veloMessages.scrollHeight;
+}
+
+// Enter key send
+veloInput.addEventListener('keypress', function(e) {
+  if (e.key === 'Enter') sendVeloMessage();
+});
+</script>
+    
 </body><loom-container id="lo-engage-ext-container"><div></div><loom-shadow classname="resolved"><template shadowrootmode="open"><span><loom-shadow-inner id="lo-engage-ext-container"><style>
           
       .lo-menu {
