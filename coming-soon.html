@@ -298,10 +298,82 @@ header{
 .notify-form input::placeholder{color:rgba(255,255,255,.35)}
 .notify-form button{background:var(--gold);color:var(--navy);padding:14px 22px;border:none;font-size:13px;font-weight:700;cursor:pointer;font-family:'Montserrat',sans-serif;transition:all .3s;white-space:nowrap}
 .notify-form button:hover{background:#fff}
-.notify-success{display:none;color:var(--gold);font-size:13px;font-weight:600;margin-top:10px}
+</style>
+</head>
+<body>
 
-/* ═══ ACTION BUTTONS ═══ */
-.cs-actions{
-  display:flex;
-  gap:16px;
-  justify-content:center;
+<div class="bg-wrap"></div>
+<div class="particles"></div>
+<div class="gold-line"></div>
+<div class="gold-line"></div>
+
+<header>
+    <a href="#" class="logo">
+        <span class="logo-text">VELOCITY AUTO INDIA</span>
+    </a>
+</header>
+
+<main class="cs-main">
+    <div class="launch-label">
+        <span class="dot"></span> Coming Soon
+    </div>
+
+    <div class="announce-badge">
+        <p>Grand Launching on <strong>19th March 2026</strong></p>
+    </div>
+
+    <h1 class="cs-headline">
+        <span class="line1">Experience Luxury</span>
+        <span class="line2">Redefined</span>
+    </h1>
+
+    <p class="cs-sub">Premium OEM parts for Mercedes, BMW, Audi, Porsche, Bentley, and Rolls Royce. Quality you can trust, speed you can feel.</p>
+
+    <div class="countdown-wrap">
+        <div class="countdown">
+            <div class="cd-box"><div class="cd-num" id="days">00</div><div class="cd-unit">Days</div></div>
+            <div class="cd-box"><div class="cd-num" id="hours">00</div><div class="cd-unit">Hours</div></div>
+            <div class="cd-box"><div class="cd-num" id="minutes">00</div><div class="cd-unit">Mins</div></div>
+            <div class="cd-box"><div class="cd-num" id="seconds">00</div><div class="cd-unit">Secs</div></div>
+        </div>
+    </div>
+
+    <div class="cs-actions" style="margin-top: 30px; position: relative; z-index: 20;">
+        <div class="contact-buttons" style="display: flex; flex-flow: row wrap; justify-content: center; align-items: center; gap: 15px; width: 100%;">
+            <a href="https://wa.me/919611991902" class="btn btn-whatsapp" style="background-color: #25d366; color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; display: flex; align-items: center; gap: 10px;">
+                <i class="fab fa-whatsapp"></i> WhatsApp Us
+            </a>
+            <a href="mailto:kumarvelocityautoindia@gmail.com" class="btn btn-email" style="background-color: transparent; color: white; padding: 12px 25px; text-decoration: none; border: 1px solid white; border-radius: 5px; font-weight: bold; display: flex; align-items: center; gap: 10px;">
+                <i class="fas fa-envelope"></i> Email Us
+            </a>
+        </div>
+    </div>
+</main>
+
+<script>
+    // Set Launch Date: March 19, 2026, 09:00:00 AM
+    const launchDate = new Date("March 19, 2026 09:00:00").getTime();
+
+    const timer = setInterval(function() {
+        const now = new Date().getTime();
+        const distance = launchDate - now;
+
+        const d = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const s = Math.floor((distance % (1000 * 60)) / 1000);
+
+        if(document.getElementById("days")) document.getElementById("days").innerHTML = d.toString().padStart(2, '0');
+        if(document.getElementById("hours")) document.getElementById("hours").innerHTML = h.toString().padStart(2, '0');
+        if(document.getElementById("minutes")) document.getElementById("minutes").innerHTML = m.toString().padStart(2, '0');
+        if(document.getElementById("seconds")) document.getElementById("seconds").innerHTML = s.toString().padStart(2, '0');
+
+        if (distance < 0) {
+            clearInterval(timer);
+            document.querySelector(".countdown-wrap").innerHTML = "<h2 style='color:#FFD700;'>VELOCITY AUTO INDIA IS LIVE!</h2>";
+        }
+    }, 1000);
+</script>
+</body>
+</html>
+   
